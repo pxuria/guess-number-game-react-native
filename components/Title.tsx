@@ -1,3 +1,4 @@
+import { customColors } from "@/constants/Colors";
 import { ReactNode } from "react";
 import { StyleSheet, Text } from "react-native";
 
@@ -17,10 +18,10 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: "bold",
-        color: "#ddb52f",
+        color: customColors.accent500,
         textAlign: "center",
         padding: 12,
         borderWidth: 2,
-        borderColor: "#ddb52f",
+        borderColor: customColors.accent500,
     }
 });

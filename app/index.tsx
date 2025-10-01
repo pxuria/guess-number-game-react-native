@@ -1,3 +1,4 @@
+import { customColors } from "@/constants/Colors";
 import GameScreen from "@/screens/Game.screen";
 import StartGameScreen from "@/screens/StartGame.screen";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -18,7 +19,7 @@ export default function HomeScreen() {
     }
 
     return (
-        <LinearGradient colors={["#4e0329", "#ddb52f"]} style={styles.root}>
+        <LinearGradient colors={[customColors.primary700, customColors.accent500]} style={styles.root}>
             <ImageBackground
                 source={require('../assets/images/background.png')}
                 resizeMode="cover"

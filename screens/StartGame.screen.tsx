@@ -1,4 +1,5 @@
 import PrimaryButton from "@/components/PrimaryButton";
+import { customColors } from "@/constants/Colors";
 import { useState } from "react";
 import { Alert, StyleSheet, TextInput, View } from "react-native";
 
@@ -68,15 +69,15 @@ const styles = StyleSheet.create({
         shadowColor: "black",
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 6,
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.25
     },
     textInput: {
         width: 50,
         textAlign: "center",
         fontSize: 32,
-        borderBottomColor: "#ddb52f",
+        borderBottomColor: customColors.accent500,
         borderBottomWidth: 2,
-        color: "#ddb52f",
+        color: customColors.accent500,
         marginVertical: 8,
         fontWeight: "bold"
     },
