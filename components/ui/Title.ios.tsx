@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Platform, StyleSheet, Text } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 interface Props {
     children: ReactNode;
@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign: "center",
         padding: 12,
-        borderWidth: Platform.select({ ios: 0, android: 2 }),
+        // borderWidth: Platform.OS === 'android' ? 2 : 0,
+        // borderWidth: Platform.select({ ios: 0, android: 2 }),
+        borderWidth: 2,
         borderColor: 'white',
         maxWidth: '80%',
         width: 300

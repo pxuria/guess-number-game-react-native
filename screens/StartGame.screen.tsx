@@ -12,7 +12,7 @@ interface Props {
 
 const StartGameScreen = ({ onPickNum }: Props) => {
     const [number, setNumber] = useState('');
-    const { width, height } = useWindowDimensions();
+    const { height } = useWindowDimensions();
 
     function inputHandler(enteredNumber: string) {
         setNumber(enteredNumber)
@@ -34,12 +34,10 @@ const StartGameScreen = ({ onPickNum }: Props) => {
         setNumber('');
     }
 
-    const marginTop = height > 380 ? 30 : 100;
-
     return (
         <ScrollView style={styles.screen}>
             <KeyboardAvoidingView style={styles.screen} behavior="position">
-                <View style={[styles.rootContainer, { marginTop }]}>
+                <View style={[styles.rootContainer, { marginTop: height > 380 ? 30 : 100 }]}>
                     <Title>Guess My Number</Title>
 
                     <Card>
